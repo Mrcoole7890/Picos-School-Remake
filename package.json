@@ -1,0 +1,24 @@
+{
+  "name": "picos-school-remake",
+  "version": "1.0.0",
+  "description": "This is a remake of the game Pico's School make in 1999",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mrcoole7890/Picos-School-Remake.git"
+  },
+  "author": "Cole A. Kendall and Sydnee Beltcher",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mrcoole7890/Picos-School-Remake/issues"
+  },
+  "homepage": "https://github.com/Mrcoole7890/Picos-School-Remake#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}
