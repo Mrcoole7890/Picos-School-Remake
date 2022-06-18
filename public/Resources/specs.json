@@ -4,8 +4,47 @@
         "width": 800,
         "height": 600
     },
+
+    "map": {
+        "sceneGraph" : [
+            ["A", "B", null],
+            ["B", null, null]
+        ],
+        "start" : "A"
+    },
+
+    "Scenes": {
+        "A": {
+            "entities":
+                [["LockerFront", 100, 0],
+                ["LockerFront", 0, 0],
+                ["LockerFront", 200, 0],
+                ["LockerFront", 300, 0],
+                ["LockerFront", 400, 0],
+                ["LockerFront", 500, 0]]
+        },
+        "B": {
+            "entities": 
+                [["LockerFront", 20, 300]]
+        }
+    },
+
     "entities":
     {
-        
+        "LockerBack": {
+            "texturePath": "Resources\\testAsset\\pain.png",
+            "width": 300,
+            "height": 200
+        },
+        "LockerFront": {
+            "texturePath": "Resources\\testAsset\\Sorrow.png",
+            "width": 100,
+            "height": 100
+        },
+        "blunt": {
+            "texturePath": "",
+            "width": 0,
+            "height": 0
+        }
     }
 }
