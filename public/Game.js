@@ -14,15 +14,10 @@ var Game = function(pathToConfigJSON) {
 
         let app = new PIXI.Application({ width: objRef.rendererWidth, height: objRef.rendererHeight });
         document.body.appendChild(app.view);
-    }
 
-    this.loadTextures = function(textureArr, folderPath, fileExtention, numOfFrames)
-    {
-        for (let i=0; i < numOfFrames; i++)
-        {
-            let texture = PIXI.Texture.from(folderPath + i + fileExtention);
-            textureArr.push(texture);
-        };
+        let gameMap = new Map(ResourcesJSON, app);
+        gameMap.init();
+        gameMap.loadAssets();
     }
 
 };
