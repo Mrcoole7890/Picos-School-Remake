@@ -32,18 +32,27 @@
                 ["LockerOpen", 700, 195],
                 ["LockerClosed", 700, 195],
                 ["LockerOpen", 645, 195],
-                ["LockerClosed", 645, 195]],
+                ["LockerClosed", 645, 195],
+                ["lightingSchoolDoor", 0, 0]],
             "Background": "Resources\\HallwayBg\\hallway_sketch.png"
         },
         "B": {
             "entities": 
-                [["LockerClosedFlipped", 20, 300]],
-            "Background": "Resources\\HallwayBg\\hallway_sketch.png"  
+                [["LockerOpenFlipped", 175, 195],
+                ["LockerClosedFlipped", 175, 195]],
+            "Background": "Resources\\HallwayBg\\hallway_gen.png"  
         }
     },
 
     "entities":
     {
+        "lightingSchoolDoor": {
+            "class":"lightingSchoolDoor",
+            "texturePath": "Resources\\HallwayBg\\hallway_1_light.png",
+            "width": 800,
+            "height": 600,
+            "interactible": false
+        },
         "LockerOpenFlipped": {
             "class": "LockerOpenFlipped",
             "texturePath": "Resources\\Lockers\\open_locker_red_flipped.png",
@@ -60,14 +69,14 @@
         },
         "LockerOpen": {
             "class": "LockerOpen",
-            "texturePath": "Resources\\Lockers\\open_locker_red.png",
+            "texturePath": "Resources\\Lockers\\open_locker_green.png",
             "width": 70,
             "height": 210,
             "interactible": false
         },
         "LockerClosed": {
             "class": "LockerClosed",
-            "texturePath": "Resources\\Lockers\\closed_locker_red.png",
+            "texturePath": "Resources\\Lockers\\closed_locker_green.png",
             "width": 70,
             "height": 210,
             "interactible": true
