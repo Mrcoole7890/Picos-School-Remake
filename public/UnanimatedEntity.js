@@ -7,7 +7,7 @@ var UnanimatedEntity = function(JSONObject, x, y) {
     this.texturePath = JSONObject.texturePath;
     this.width = JSONObject.width;
     this.height = JSONObject.height;
-    this.interactible = JSONObject.interactible
+    this.interactible = JSONObject.interactible;
     this.x = x;
     this.y = y;
     let spriteTexture = PIXI.Texture.from(this.texturePath);
@@ -23,7 +23,7 @@ var UnanimatedEntity = function(JSONObject, x, y) {
     };
 
     this.unload = function() {
-        this.sprite.destroy();
+        this.sprite.visible = false;
     }
 
     // this.loadTextures = function(textureArr, folderPath, fileExtention, numOfFrames)

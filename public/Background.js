@@ -19,6 +19,6 @@ var Background = function(JSONResources, backgroundTexture) {
     }
 
     this.unload = function() {
-        this.sprite.destroy();
+        this.sprite.visible = false;
     }
 }
