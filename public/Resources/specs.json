@@ -8,7 +8,8 @@
     "map": {
         "sceneGraph" : [
             ["A", "B", null],
-            ["B", null, null]
+            ["B", "C", null],
+            ["C", null, null]
         ],
         "start" : "A"
     },
@@ -64,10 +65,40 @@
                 ["LockerClosedGray", 725, 195],
                 ["LockerOpenGray", 670, 195],
                 ["LockerClosedGray", 670, 195],
-                ["leftSceneButton", 0, 500]
+                ["leftSceneButton", 0, 500],
+                ["rightSceneButton", 700, 500]
                 ],
                 
             "Background": "Resources\\HallwayBg\\hallway_gen.png"  
+        },
+        "C": {
+            "entities": [
+                ["LockerOpenFlippedGray", 0, 195],
+                ["LockerClosedFlippedGray", 0, 195],
+                ["LockerOpenFlippedGray", 55, 195],
+                ["LockerClosedFlippedGray", 55, 195],
+                ["LockerOpenFlippedGreen", 130, 195],
+                ["LockerClosedFlippedGreen", 130, 195],
+                ["LockerOpenFlippedGreen", 185, 195],
+                ["LockerClosedFlippedGreen", 185, 195],
+                ["LockerOpenFlippedGreen", 240, 195],
+                ["LockerClosedFlippedGreen", 240, 195],
+                ["LockerOpenFlippedGreen", 295, 195],
+                ["LockerClosedFlippedGreen", 295, 195],
+                ["LockerOpenFlippedGreen", 350, 195],
+                ["LockerClosedFlippedGreen", 350, 195],
+                ["door", 437, 201],
+                ["LockerOpenRed", 732, 195],
+                ["LockerClosedRed", 732, 195],
+                ["LockerOpenRed", 677, 195],
+                ["LockerClosedRed", 677, 195],
+                ["LockerOpenRed", 622, 195],
+                ["LockerClosedRed", 622, 195],
+                ["LockerOpenRed", 567, 195],
+                ["LockerClosedRed", 567, 195],
+                ["leftSceneButton", 0, 500]
+            ],
+            "Background": "Resources\\HallwayBg\\hallway_gen.png" 
         }
     },
 
