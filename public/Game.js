@@ -9,6 +9,8 @@ var Game = function(pathToConfigJSON) {
 
     this.init = function(ResourcesJSON, objRef)
     {
+        GLOBAL_VALS = ResourcesJSON;
+
         objRef.rendererWidth = ResourcesJSON.renderer.width;
         objRef.rendererHeight= ResourcesJSON.renderer.height;
 
