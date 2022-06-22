@@ -1,4 +1,4 @@
-var Background = function(JSONResources, backgroundTexture) {
+var Background = function(backgroundTexture) {
     this.sprite;
     this.texture = PIXI.Texture.from(backgroundTexture);
     this.x = 0;

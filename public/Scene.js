@@ -25,11 +25,10 @@ function Scene(JSONResources, JSONSceneName, app, map) {
             let entity = new UnanimatedEntity(JSONResources.entities[e[0]], e[1], e[2]);
             this.entities.push(entity);
         });
-        
     };
 
     this.loadAssets = function() {
-        let background = new Background(this.JSONResources, this.background);
+        let background = new Background(this.background);
         background.init();
         background.load(this.app);
         this.entities.forEach(e => {
