@@ -11,13 +11,13 @@ var Game = function(pathToConfigJSON) {
     {
         GLOBAL_VALS = ResourcesJSON;
 
-        objRef.rendererWidth = ResourcesJSON.renderer.width;
-        objRef.rendererHeight= ResourcesJSON.renderer.height;
+        objRef.rendererWidth = GLOBAL_VALS.renderer.width;
+        objRef.rendererHeight= GLOBAL_VALS.renderer.height;
 
         let app = new PIXI.Application({ width: objRef.rendererWidth, height: objRef.rendererHeight });
         document.body.appendChild(app.view);
 
-        let gameMap = new Map(ResourcesJSON, app);
+        let gameMap = new Map(app);
         gameMap.init();
         gameMap.loadAssets();
     }

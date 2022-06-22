@@ -1,4 +1,4 @@
-var Map = function(JSONResources, app) {
+var Map = function(app) {
     this.app = app;
     this.scenes = [];
     this.current;
