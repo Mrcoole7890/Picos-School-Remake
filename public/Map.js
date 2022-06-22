@@ -16,14 +16,13 @@ var Map = function(JSONResources, app) {
 
     this.moveUp = function() {};
     this.moveDown = function() {};
-    this.JSONResources = JSONResources;
 
     this.init = function() {
-        this.JSONResources.map.sceneGraph.forEach(e =>{
-            let tempScene = new Scene(this.JSONResources, e[0], this.app, this);
+        GLOBAL_VALS.map.sceneGraph.forEach(e =>{
+            let tempScene = new Scene(e[0], this.app, this);
             tempScene.init(e[1], e[2]);
             this.scenes.push(tempScene);
-            if (e[0] == this.JSONResources.map.start) this.current = tempScene;
+            if (e[0] == GLOBAL_VALS.map.start) this.current = tempScene;
         });
         this.scenes.forEach(e =>{
             if (e.leftScene != null) {

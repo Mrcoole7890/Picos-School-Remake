@@ -1,15 +1,14 @@
-function Scene(JSONResources, JSONSceneName, app, map) {
+var Scene = function Scene( JSONSceneName, app, map) {
     this.app = app;
     this.map = map;
-    this.JSONResources = JSONResources;
     this.entities = [];
-    this.background = JSONResources.Scenes[JSONSceneName].Background;
+    this.background = GLOBAL_VALS.Scenes[JSONSceneName].Background;
     this.leftScene;
     this.rightScene;
     this.upScene;
     this.downScene;
     this.JSONSceneName = JSONSceneName;
-    this.JSONScene = JSONResources.Scenes[JSONSceneName];
+    this.JSONScene = GLOBAL_VALS.Scenes[JSONSceneName];
 
     this.setLeftScene = function(scene) { this.leftScene = scene};
     this.setRightScene = function(scene) { this.rightScene = scene};
@@ -22,7 +21,7 @@ function Scene(JSONResources, JSONSceneName, app, map) {
         this.rightScene = null;
         this.downScene = null;
         this.JSONScene.entities.forEach(e => {
-            let entity = new UnanimatedEntity(JSONResources.entities[e[0]], e[1], e[2]);
+            let entity = new UnanimatedEntity(GLOBAL_VALS.entities[e[0]], e[1], e[2]);
             this.entities.push(entity);
         });
     };
@@ -32,7 +31,6 @@ function Scene(JSONResources, JSONSceneName, app, map) {
         background.init();
         background.load(this.app);
         this.entities.forEach(e => {
-            
             Intertaction(this, e, this.map);
             e.load(this.app);
         });
