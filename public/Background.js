@@ -3,8 +3,8 @@ var Background = function(JSONResources, backgroundTexture) {
     this.texture = PIXI.Texture.from(backgroundTexture);
     this.x = 0;
     this.y = 0;
-    this.width = JSONResources.renderer.width;
-    this.height = JSONResources.renderer.height;
+    this.width = GLOBAL_VALS.renderer.width;
+    this.height = GLOBAL_VALS.renderer.height;
     
     this.init = function() {
         this.sprite = new PIXI.Sprite(this.texture);
