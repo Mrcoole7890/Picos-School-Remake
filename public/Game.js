@@ -1,20 +1,19 @@
-var Game = function(pathToConfigJSON) {
+var Game = function() {
 
     this.rendererWidth;
     this.rendererHeight;
 
-    fetch(pathToConfigJSON)
-                .then(responce => responce.json())
-                .then(data => {this.init(data, this)});
+    //fetch(pathToConfigJSON)
+    //            .then(responce => responce.json())
+    //            .then(data => {this.init(data, this)});
 
-    this.init = function(ResourcesJSON, objRef)
+    this.init = function()
     {
-        GLOBAL_VALS = ResourcesJSON;
 
-        objRef.rendererWidth = GLOBAL_VALS.renderer.width;
-        objRef.rendererHeight= GLOBAL_VALS.renderer.height;
+        this.rendererWidth = GLOBAL_VALS.renderer.width;
+        this.rendererHeight= GLOBAL_VALS.renderer.height;
 
-        let app = new PIXI.Application({ width: objRef.rendererWidth, height: objRef.rendererHeight });
+        let app = new PIXI.Application({ width: this.rendererWidth, height: this.rendererHeight });
         document.body.appendChild(app.view);
 
         let gameMap = new Map(app);
