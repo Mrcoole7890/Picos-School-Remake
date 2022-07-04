@@ -25,13 +25,4 @@ var UnanimatedEntity = function(JSONObject, x, y) {
     this.unload = function() {
         this.sprite.visible = false;
     }
-
-    // this.loadTextures = function(textureArr, folderPath, fileExtention, numOfFrames)
-    // {
-    //     for (let i=0; i < numOfFrames; i++)
-    //     {
-    //         let texture = PIXI.Texture.from(folderPath + i + fileExtention);
-    //         textureArr.push(texture);
-    //     };
-    // }
 };
