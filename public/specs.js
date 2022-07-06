@@ -398,7 +398,7 @@ const GLOBAL_VALS = {
 	entities: {
 		picoRunningLeft: {
 			class: "picoRunningLeft",
-			texturePath: "\\Resources\\runningPicoLeft\\",
+			texturePath: "Resources\\runningPicoLeft\\",
 			width: 250,
 			height: 220,
 			interactible: false,
