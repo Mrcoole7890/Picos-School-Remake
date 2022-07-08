@@ -1,4 +1,5 @@
 var Map = function(app) {
+    this.pico;
     this.app = app;
     this.scenes = [];
     this.current;
@@ -18,6 +19,7 @@ var Map = function(app) {
     this.moveDown = function() {};
 
     this.init = function() {
+        this.pico = new Pico(null);
         GLOBAL_VALS.map.sceneGraph.forEach(e =>{
             let tempScene = new Scene(e[0], this.app, this);
             tempScene.init(e[1], e[2]);
