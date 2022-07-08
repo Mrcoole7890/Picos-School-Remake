@@ -117,11 +117,6 @@ const GLOBAL_VALS = {
 					0
 				],
 				[
-					"picoRunningLeft",
-					300,
-					300
-				],
-				[
 					"rightSceneButton",
 					700,
 					500
@@ -250,11 +245,6 @@ const GLOBAL_VALS = {
 					"LockerClosedGray",
 					670,
 					195
-				],
-				[
-					"picoRunningLeft",
-					300,
-					300
 				],
 				[
 					"leftSceneButton",
@@ -404,7 +394,19 @@ const GLOBAL_VALS = {
 			interactible: false,
 			animatedSpecs: {
 				frameCount: 8,
-				animationSpeed: .2,
+				animationSpeed: .17,
+				fileExtention: ".png"
+			}
+		},
+		picoRunningRight: {
+			class: "picoRunningRight",
+			texturePath: "Resources\\runningPicoRight\\",
+			width: 250,
+			height: 220,
+			interactible: false,
+			animatedSpecs: {
+				frameCount: 8,
+				animationSpeed: .17,
 				fileExtention: ".png"
 			}
 		},
