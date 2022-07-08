@@ -1,4 +1,4 @@
-var Intertaction = function(scene ,entity, gameMap) {
+var Intertaction = function(scene, entity, gameMap) {
     switch(entity.class){
         case "LockerClosedGreen":
             entity.onClick = function() {
@@ -33,11 +33,17 @@ var Intertaction = function(scene ,entity, gameMap) {
         case "rightSceneButton":
             entity.onClick = function() {
                 gameMap.moveLeft();
+                if (gameMap.pico != null) gameMap.pico.destroyTicker();
+                gameMap.pico.initRightRun(gameMap.app);
+                gameMap.pico.loadFromStageLeft(gameMap.app);
             };
             break;
         case "leftSceneButton":
             entity.onClick = function() {
                 gameMap.moveRight();
+                if (gameMap.pico != null) gameMap.pico.destroyTicker();
+                gameMap.pico.initLeftRun(gameMap.app);
+                gameMap.pico.loadFromStageRight(gameMap.app);
             };
             break;
     }
