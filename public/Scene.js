@@ -22,10 +22,7 @@ var Scene = function Scene( JSONSceneName, app, map) {
         this.downScene = null;
         this.JSONScene.entities.forEach(e => {
             var entity;
-            if ('animatedSpecs' in GLOBAL_VALS.entities[e[0]]) 
-                entity = new AnimatedEntity(GLOBAL_VALS.entities[e[0]], e[1], e[2]);
-            else
-                entity = new UnanimatedEntity(GLOBAL_VALS.entities[e[0]], e[1], e[2]);
+            entity = new UnanimatedEntity(GLOBAL_VALS.entities[e[0]], e[1], e[2]);
             this.entities.push(entity);
         });
     };
