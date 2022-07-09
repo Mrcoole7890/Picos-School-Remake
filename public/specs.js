@@ -410,6 +410,30 @@ const GLOBAL_VALS = {
 				fileExtention: ".png"
 			}
 		},
+		picoIdleRight: {
+			class: "picoIdleRight",
+			texturePath: "Resources\\idlePicoRight\\",
+			width: 94,
+			height: 214,
+			interactible: false,
+			animatedSpecs: {
+				frameCount: 4,
+				animationSpeed: .17,
+				fileExtention: ".png"
+			}
+		},
+		picoIdleLeft: {
+			class: "picoIdleLeft",
+			texturePath: "Resources\\idlePicoLeft\\",
+			width: 94,
+			height: 214,
+			interactible: false,
+			animatedSpecs: {
+				frameCount: 4,
+				animationSpeed: .17,
+				fileExtention: ".png"
+			}
+		},
 		lightingSchoolDoor: {
 			class: "lightingSchoolDoor",
 			texturePath: "Resources\\HallwayBg\\hallway_1_light.png",
