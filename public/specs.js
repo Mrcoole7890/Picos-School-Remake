@@ -418,7 +418,7 @@ const GLOBAL_VALS = {
 			interactible: false,
 			animatedSpecs: {
 				frameCount: 4,
-				animationSpeed: .17,
+				animationSpeed: .10,
 				fileExtention: ".png"
 			}
 		},
@@ -430,9 +430,23 @@ const GLOBAL_VALS = {
 			interactible: false,
 			animatedSpecs: {
 				frameCount: 4,
-				animationSpeed: .17,
+				animationSpeed: .10,
 				fileExtention: ".png"
 			}
+		},
+		MapUICellFull: {
+			class: "MapUICellFull",
+			texturePath: "Resources\\MapUICell\\map_full.png",
+			width: 35,
+			height: 35,
+			interactible: false
+		},
+		MapUICellEmpty: {
+			class: "MapUICellEmpty",
+			texturePath: "Resources\\MapUICell\\map_empty.png",
+			width: 35,
+			height: 35,
+			interactible: false
 		},
 		lightingSchoolDoor: {
 			class: "lightingSchoolDoor",
