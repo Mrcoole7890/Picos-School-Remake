@@ -29,15 +29,19 @@ var Map = function(app) {
     this.moveUp = function() {};
     this.moveDown = function() {};
 
+    //initiallizes pico sprite, gets all the scenes described in the specs.js file
+    //maps all the scenes and their neighbors to be traversible
     this.init = function() {
-        this.pico = new Pico(null);
-        GLOBAL_VALS.map.sceneGraph.forEach(e =>{
+        this.pico = new Pico(null); // I dont know why this is NULL...
+        GLOBAL_VALS.map.sceneGraph.forEach(e =>{ // Gets all scenes in spec.js and initializes them and puts them in the scenes array
             let tempScene = new Scene(e[0], this.app, this);
             tempScene.init(e[1], e[2]);
             this.scenes.push(tempScene);
             if (e[0] == GLOBAL_VALS.map.start) this.current = tempScene;
         });
-        this.scenes.forEach(e =>{
+        this.scenes.forEach(e =>{ 
+            // Goes though all directions of a scene and checks to see if a neigbor exists if so, 
+            // the scenes are given reference to their neigbors in the scenes array
             if (e.leftScene != null) {
                 let searchAttempt = this.findScene(e.leftScene);
                 if (searchAttempt != null) searchAttempt.setRightScene(e.JSONSceneName);
@@ -49,11 +53,11 @@ var Map = function(app) {
         });
     };
 
-    this.loadAssets = function() {
+    this.loadAssets = function() { // sets unloaded sprites in a given scene to visible
         this.current.loadAssets();
     };
 
-    this.findScene = function (sceneName) {
+    this.findScene = function (sceneName) { // Searches for a scene by name
         for(let i = 0; i < this.scenes.length; i++){
             if (this.scenes[i].JSONSceneName == sceneName) return this.scenes[i];
         }
