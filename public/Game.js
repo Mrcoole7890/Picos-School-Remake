@@ -3,13 +3,8 @@ var Game = function() {
     this.rendererWidth;
     this.rendererHeight;
 
-    //fetch(pathToConfigJSON)
-    //            .then(responce => responce.json())
-    //            .then(data => {this.init(data, this)});
-
     this.init = function()
     {
-
         this.rendererWidth = GLOBAL_VALS.renderer.width;
         this.rendererHeight= GLOBAL_VALS.renderer.height;
 
