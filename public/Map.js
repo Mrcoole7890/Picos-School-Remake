@@ -1,14 +1,25 @@
+/*
+
+   This is the Map class. This is where all scenes are called, initialized, destroyed, and traversed through.
+
+*/
+
 var Map = function(app) {
-    this.pico;
+    this.pico;  // Pico sprite
     this.app = app;
-    this.scenes = [];
-    this.current;
+    this.scenes = []; // the list of scenes present in the game
+    this.current; // the current scene to be displayed
+
+    // Action used by the event handeler to change the scene to one left of the current scene
+    // Does NOT check if no scene exists
     this.moveLeft = function() {
         this.current.unloadAssets();
         this.current = this.findScene(this.current.leftScene);
         this.loadAssets();
     };
 
+    // Action used by the event handeler to change the scene to one right of the current scene
+    // Does NOT check if no scene exists
     this.moveRight = function() {
         this.current.unloadAssets();
         this.current = this.findScene(this.current.rightScene);

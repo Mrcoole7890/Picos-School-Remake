@@ -1,3 +1,11 @@
+/*
+
+   This is the main class incharge of initialising the PIXI.js application
+   The renderer width and height are gotten from the specs.js
+   A Map object is then created and a given a reference to the PIXI.js application
+
+*/
+
 var Game = function() {
 
     this.rendererWidth;
