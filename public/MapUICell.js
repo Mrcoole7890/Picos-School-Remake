@@ -1,3 +1,7 @@
+/*
+    This class is in charge of rendering the map cells for the user interface
+    This class uses the UnanimatedEntity class to reduced repeated code for displaying assets
+*/
 var MapUICell = function() {
     this.x;
     this.y;
